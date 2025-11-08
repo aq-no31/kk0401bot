@@ -71,6 +71,7 @@ client.on('messageCreate', (message) => {
       if (message.content.includes('しんどい')) {
         message.react("🫂");
     }
+}
  );
 
 // エラーハンドリング
