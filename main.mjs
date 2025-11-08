@@ -34,7 +34,44 @@ client.on('messageCreate', (message) => {
         message.reply('🏓 pong!');
         console.log(`📝 ${message.author.tag} が ping コマンドを使用`);
     }
-});
+
+    if (message.content.includes('のどかわいた')) {
+    let drink = ["🍵","🧃","🥤","🧋","🍹","🥛"]
+    let bar = drink[Math.floor(Math.random() * drink.length)];
+        message.react(bar);
+
+     
+}
+      if (message.content.includes('おやつたべたい')) {
+    let snack = ["🥨","🥞","🍡","🍧","🍨","🍭","🍫","🍩","🍪"]
+    let pick = snack[Math.floor(Math.random() * snack.length)];
+        message.react(pick);
+      }
+  if (message.content.includes('ごほうびほしい')) {
+        message.react("🍬");message.react("💯");message.react("💮");message.react("🎖️");
+    }
+    if (message.content.includes('みてみて')) {
+        message.react("👀");message.react("💭");message.react("‼️");message.react("👏");message.react("👍");
+    }
+     if (message.content.includes('具合悪い')) {
+        message.reply("大丈夫？無理はしないで、少し布団で休んでおいで。\n悪くなるようなら病院に行くんだよ。");
+
+  }
+        if (message.content.includes('神無月くーん')) {
+        message.reply("はいはーい、神無月だよ。どうしたのかな？");
+        }
+         if (message.content.includes('おなかすいた')) {
+    let food = ["🍙","🍜","🍛","🍕","🍣"]
+    let demae = food[Math.floor(Math.random() * food.length)];
+        message.react(demae);
+         }
+          if (message.content.includes('つらい')) {
+        message.react("🫂");
+    }
+      if (message.content.includes('しんどい')) {
+        message.react("🫂");
+    }
+ );
 
 // エラーハンドリング
 client.on('error', (error) => {
